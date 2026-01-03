@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Gitea Runner</Name>
+  <Name>Gitea-Runner</Name>
   <Repository>gitea/act_runner</Repository>
   <Registry>https://hub.docker.com/r/gitea/act_runner</Registry>
   <Network>bridge</Network>
