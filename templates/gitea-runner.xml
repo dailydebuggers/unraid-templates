@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Gitea Runner</Name>
+  <Repository>gitea/act_runner</Repository>
+  <Registry>https://hub.docker.com/r/gitea/act_runner</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://gitea.com/gitea/act_runner</Project>
+  <Overview>A runner for Gitea based on act.</Overview>
+  <Category>Productivity</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon></Icon>
+  <ExtraParams/>
+  <Description>A runner for Gitea based on act.</Description>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitea-runner</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>GITEA_URL</Value>
+      <Name>GITEA_INSTANCE_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>GITEA_TOKEN</Value>
+      <Name>GITEA_RUNNER_REGISTRATION_TOKEN</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="GITEA_INSTANCE_URL" Target="GITEA_INSTANCE_URL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">GITEA_URL</Config>
+  <Config Name="GITEA_RUNNER_REGISTRATION_TOKEN" Target="GITEA_RUNNER_REGISTRATION_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">GITEA_TOKEN</Config>
+  <Config Name="Data Storage Path" Target="/data" Default="/mnt/user/appdata/gitea-runner" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/gitea-runner</Config>
+  <Config Name="Docker Sock" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
+</Container>
