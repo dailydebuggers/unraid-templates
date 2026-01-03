@@ -11,7 +11,7 @@
   <Category>Productivity</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon></Icon>
+  <Icon>https://raw.githubusercontent.com/dailydebuggers/unraid-templates/refs/heads/main/icons/gitea-runner.png</Icon>
   <ExtraParams/>
   <Description>A runner for Gitea based on act.</Description>
   <Data>
